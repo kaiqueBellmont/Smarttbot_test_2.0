@@ -38,15 +38,15 @@ class Requester(object):
     # dica 2: setar um candle.py de 5 minutos
     def bitcoin(self):
         self.__res = self._make_request()
-        bitcoin = self.__res['BTC_BTS']
+        bitcoin = self.__res["BTC_BTS"]
         bitcoin = {
-            'Moeda': 'Bitcoin',
-            'Periodicidade': 'reference_candle',
-            'Datetime': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-4],
-            'Open': bitcoin['last'],
-            'Low': bitcoin['low24hr'],
-            'High': bitcoin['high24hr'],
-            'close': bitcoin['last']
+            "Moeda": "Bitcoin",
+            "Periodicidade": "reference_candle",
+            "Datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-4],
+            "Open": bitcoin["last"],
+            "Low": bitcoin["low24hr"],
+            "High": bitcoin["high24hr"],
+            "close": bitcoin["last"],
         }
         return bitcoin
 

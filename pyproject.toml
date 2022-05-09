@@ -9,6 +9,12 @@ python = "^3.8"
 pytest = "^7.1.2"
 requests = "^2.27.1"
 black = "^22.3.0"
+self = "^2020.12.3"
+SQLAlchemy = "^1.4.36"
+PyMySQL = "^1.0.2"
+mysql-connector-python = "^8.0.29"
+cryptography = "^37.0.2"
+marshmallow-sqlalchemy = "^0.28.0"
 
 [tool.poetry.dev-dependencies]
 

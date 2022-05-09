@@ -1,13 +1,13 @@
 class Candle(object):
     def __init__(
-            self,
-            moeda: str,
-            periodicidade: int,
-            datetime: str,
-            open: str,
-            low: str,
-            high: str,
-            close: str
+        self,
+        moeda: str,
+        periodicidade: int,
+        datetime: str,
+        open: str,
+        low: str,
+        high: str,
+        close: str,
     ) -> None:
         self.moeda = moeda
         self.periodicidade = periodicidade
