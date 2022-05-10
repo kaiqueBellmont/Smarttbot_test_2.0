@@ -13,7 +13,7 @@ session = Session()
 Base = declarative_base()
 
 
-class Candles(Base):
+class CandlesModel(Base):
     __tablename__ = "candles"
 
     id = Column(Integer, primary_key=True)
@@ -25,14 +25,15 @@ class Candles(Base):
     High = Column(String(10), index=True)
     Close = Column(String(10), index=True)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"Candle: {self.Moeda} {self.Periodicidade} {self.Datetime} "
             f" {self.Open} {self.Low} {self.High} {self.Close}"
         )
 
-    def save_many(self, lista: list):
-        candle_list = [Candles(**item) for item in lista]
+    @classmethod
+    def save_many(cls, lista: list) -> None:
+        candle_list = [CandlesModel(**item) for item in lista]
         session.add_all(candle_list)
         session.commit()
 
